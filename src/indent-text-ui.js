@@ -1,7 +1,7 @@
 import Plugin from "@ckeditor/ckeditor5-core/src/plugin";
 import ButtonView from "@ckeditor/ckeditor5-ui/src/button/buttonview";
-import indentLeft from "../theme/icons/left-indent-text-editor-svgrepo-com.svg";
-import indentRight from "../theme/icons/right-indent-text-editor-svgrepo-com.svg";
+import indentLeft from "../theme/icons/left-indent.svg";
+import indentRight from "../theme/icons/right-indent.svg";
 import {INDENT_TEXT_COMMAND, INDENT_TEXT_DEFAULT_VALUE} from "./constants";
 
 /**
