@@ -17,6 +17,7 @@ export class IndentTextUi extends Plugin {
         const indentLength = (options && options.indentLength) ? options.indentLength : INDENT_TEXT_DEFAULT_VALUE;
 
         editor.ui.componentFactory.add('indentLeft', locale => {
+            const command = editor.commands.get(INDENT_TEXT_COMMAND);
             const view = new ButtonView(locale);
 
             view.set({
@@ -25,6 +26,8 @@ export class IndentTextUi extends Plugin {
                 tooltip: true,
                 class: 'indent-left',
             });
+
+            view.bind('isEnabled').to(command, 'isLeftEnabled');
 
             view.on('execute', () => {
                 editor.execute(INDENT_TEXT_COMMAND, {value: -indentLength});
