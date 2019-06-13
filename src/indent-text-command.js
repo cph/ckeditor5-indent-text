@@ -6,6 +6,11 @@ import first from '@ckeditor/ckeditor5-utils/src/first';
  * Indent text command
  */
 export class IndentTextCommand extends Command {
+    constructor() {
+        super(...arguments);
+        this.set('isLeftEnabled', undefined); // Makes it an observable property
+    }
+
     /**
      * @inheritDoc
      */
