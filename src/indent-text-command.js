@@ -14,6 +14,7 @@ export class IndentTextCommand extends Command {
 
         this.isEnabled = !!firstBlock;
         this.value = (this.isEnabled && firstBlock.hasAttribute(INDENT_TEXT_ATTRIBUTE)) ? firstBlock.getAttribute(INDENT_TEXT_ATTRIBUTE) : 0;
+        this.isLeftEnabled = this.isEnabled && this.value > 0;
     }
 
     /**
